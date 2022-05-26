@@ -11,7 +11,7 @@ namespace Question1.Mappings
             Map(x => x.HospitalNumber);
             Map(x => x.FullName);
             Map(x => x.Address);
-            //References(x => x.Gender);
+            Map(x => x.Gender);
             References(x => x.Hospital);
         }
     }

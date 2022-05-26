@@ -8,6 +8,25 @@ namespace Question1.Models
 {
     public class Hospital
     {
+        public Hospital()
+        {
+        }
+
+        public Hospital(int id, string name, string address, Receptionist reception, Accountant accountant)
+        {
+            Id = id;
+            Name = name;
+            Address = address;
+            Receptionist = reception;
+            Accountant = accountant;
+        }
+
+
+
+
+
+
+
         public virtual int Id { get; set; }
         public virtual string Name { get; set; }
         public virtual string Address { get; set; }
