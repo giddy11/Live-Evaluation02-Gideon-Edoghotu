@@ -39,9 +39,9 @@ namespace Question1.Repos.Helper
             return SessionFactory.OpenSession();
         }
 
-        //public static ISession CloseSession()
-        //{
-        //    return null;
-        //}
+        public static ISession CloseSession()
+        {
+            return null;
+        }
     }
 }
