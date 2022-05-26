@@ -3,7 +3,7 @@ using Question1.Models;
 
 namespace Question1.Mappings
 {
-    public class PatientMap<T> : ClassMap<Patient>//ClassMap<T> where T : Patient
+    public class PatientMap : ClassMap<Patient>//ClassMap<T> where T : Patient
     {
         public PatientMap()
         {
