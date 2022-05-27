@@ -8,6 +8,7 @@ namespace Question1.Mappings
         public PharmacistMap()
         {
             References(x => x.Hospital);
+            HasManyToMany(x => x.Drugs);
         }
     }
 }

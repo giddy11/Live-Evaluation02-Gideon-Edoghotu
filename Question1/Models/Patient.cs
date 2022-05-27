@@ -1,8 +1,10 @@
-﻿using Question1.Repos.EntityBase;
+﻿using Question1.Models.Appointment_Reviews;
+using Question1.Models.Products;
+using Question1.Repos.EntityBase;
 
 namespace Question1.Models
 {
-    public abstract class Patient : EntityBase
+    public class Patient : EntityBase
     {
         public Patient()
         {
@@ -17,10 +19,15 @@ namespace Question1.Models
             Hospital = hospital;
         }
 
+
+
        
         public virtual int HospitalNumber { get; set; }
         public virtual string Address { get; set; }
         public virtual Gender Gender { get; set; }
         public virtual Hospital Hospital { get; set; }
+        public virtual List<Drug> Drugs { get; set; }
+        public virtual Receptionist Receptionist { get; set; }
+        public virtual List<MedicalCondition> MedicalConditions { get; set; }
     }
 }

@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using Question1.Models;
+using Question1.Models.Products;
 using Question1.Repos.DBManager;
 using Question1.Repos.Helper;
 
@@ -14,8 +15,10 @@ var accountant = new Accountant();
 var doctors = new List<Doctor>();
 var nurses = new List<Nurse>();
 var pharmacists = new List<Pharmacist>();
-var unregisteredPatients = new List<UnregisteredPatient>();
+var patients = new List<Patient>();
 var registeredPatients = new List<RegisteredPatient>();
+var drugs = new List<Drug>();
+var transactions = new List<Drug>();
 #endregion
 
 #region Add Hospital
@@ -96,20 +99,45 @@ foreach (var item in registeredPatients)
 #endregion
 
 
-#region Add UnregisteredPatient
-var unregisteredPatient1 = new UnregisteredPatient(0, 006, "Comfort Rita", Gender.Female, "Opolo Housing Estate", hospital1);
-var unregisteredPatient2 = new UnregisteredPatient(1, 007, "Flora Edoghotu", Gender.Female, "Kpansia Town", hospital1);
-var unregisteredPatient3 = new UnregisteredPatient(2, 008, "Nancy Favour", Gender.Female, "Otuoke Town", hospital1);
-var unregisteredPatient4 = new UnregisteredPatient(3, 009, "Favour Angel", Gender.Male, "NNPC Junction", hospital1);
-var unregisteredPatient5 = new UnregisteredPatient(4, 010, "Anita Richard", Gender.Female, "Tombia Street", hospital1);
+#region Add Patients
+var patient1 = new Patient(0, 006, "Comfort Rita", Gender.Female, "Opolo Housing Estate", hospital1);
+var patient2 = new Patient(1, 007, "Flora Edoghotu", Gender.Female, "Kpansia Town", hospital1);
+var patient3 = new Patient(2, 008, "Nancy Favour", Gender.Female, "Otuoke Town", hospital1);
+var patient4 = new Patient(3, 009, "Favour Angel", Gender.Male, "NNPC Junction", hospital1);
+var patient5 = new Patient(4, 010, "Anita Richard", Gender.Female, "Tombia Street", hospital1);
 
-unregisteredPatients = new List<UnregisteredPatient>() { unregisteredPatient1, unregisteredPatient2, unregisteredPatient3, unregisteredPatient4, unregisteredPatient5 };
-foreach (var item in unregisteredPatients)
+patients = new List<Patient>() { patient1, patient2, patient3, patient4, patient5 };
+foreach (var item in patients)
 {
-    DataBaseManager<UnregisteredPatient>.AddItem(item);
+    DataBaseManager<Patient>.AddItem(item);
 }
 #endregion
 
+#region Add Drugs
+var drug1  = new Drug(0, "AMLODIPINE",      200, Pharmacist3);
+var drug2  = new Drug(1, "ALPRAZOLAM",      400, Pharmacist3);
+var drug3  = new Drug(2, "ATIVAN",          100, Pharmacist2);
+var drug4  = new Drug(3, "ABILIFY",         300, Pharmacist3);
+var drug5  = new Drug(4, "ACYCLOVIR",       500, Pharmacist3);
+var drug6  = new Drug(5, "ATENOLOL",        600, Pharmacist3);
+var drug7  = new Drug(6, "PARACETAMOL",     400, Pharmacist4);
+var drug8  = new Drug(7, "AMOXICILLIN",     200, Pharmacist3);
+var drug9  = new Drug(8, "BUPRENORPHINE",   700, Pharmacist3);
+var drug10 = new Drug(9, "DIAZEPAM",        800, Pharmacist3);
+var drug11 = new Drug(10, "ACETAMINOPHENE", 900, Pharmacist2);
+var drug12 = new Drug(11, "CODEINE",        300, Pharmacist3);
+var drug13 = new Drug(12, "PANADOL",        100, Pharmacist1);
+var drug14 = new Drug(13, "METOPROLOL",     200, Pharmacist3);
+var drug15 = new Drug(14, "ALLOPURNOL",     200, Pharmacist5);
+
+drugs = new List<Drug>() { drug1, drug2, drug3, drug4, drug5, drug6, drug7, drug8, drug9, drug10, drug11, drug12, drug13, drug14, drug15 };
+foreach (var item in drugs)
+{
+    DataBaseManager<Drug>.AddItem(item);
+}
+#endregion
+
+drug10.DrugPurchased(registeredPatient2);
 
 
 Console.ReadLine();

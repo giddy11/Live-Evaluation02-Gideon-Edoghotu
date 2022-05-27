@@ -7,6 +7,8 @@ namespace Question1.Mappings
         public ReceptionistMap()
         {
             References(x => x.Hospital);
+            HasMany(x => x.Patients);
+           
         }
     }
 }

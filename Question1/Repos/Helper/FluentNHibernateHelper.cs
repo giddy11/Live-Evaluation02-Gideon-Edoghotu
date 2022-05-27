@@ -28,7 +28,7 @@ namespace Question1.Repos.Helper
         public static void InitialiseSessionFactory()
         {
             _sessionFactory = Fluently.Configure()
-                .Database(MsSqlConfiguration.MsSql2012.ConnectionString(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\user\Documents\HospitalManagementDb.mdf;Integrated Security=True;Connect Timeout=30"))
+                .Database(MsSqlConfiguration.MsSql2012.ConnectionString(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\user\Documents\HospitalManagmentDataBase.mdf;Integrated Security=True;Connect Timeout=30"))
                 .Mappings(map => map.FluentMappings.AddFromAssemblyOf<Program>())
                 .ExposeConfiguration(cfg => new SchemaExport(cfg).Create(true, true))
                 .BuildSessionFactory();

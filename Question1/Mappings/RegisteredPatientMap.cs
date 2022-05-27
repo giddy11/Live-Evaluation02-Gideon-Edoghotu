@@ -11,6 +11,9 @@ namespace Question1.Mappings
             Map(x => x.Address);
             Map(x => x.Gender);
             References(x => x.Hospital);
+            HasManyToMany(x => x.Drugs);
+            HasOne(x => x.Receptionist);
+            HasMany(x => x.MedicalConditions);
         }
     }
 }
