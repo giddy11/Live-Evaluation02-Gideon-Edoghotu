@@ -3,13 +3,11 @@
 
 namespace Question1.Mappings
 {
-    public class PharmacistMap : HospitalWorkersMap<Pharmacist>
+    public class PharmacistMap : EntityBaseMap<Pharmacist>
     {
-        //public PharmacistMap()
-        //{
-        //    Id(x => x.Id);
-        //    Map(x => x.FullName);
-        //    References(x => x.Hospital);
-        //}
+        public PharmacistMap()
+        {
+            References(x => x.Hospital);
+        }
     }
 }

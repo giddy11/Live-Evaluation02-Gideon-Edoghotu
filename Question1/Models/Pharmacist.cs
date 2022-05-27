@@ -6,9 +6,8 @@ namespace Question1.Models
     {
         public Pharmacist()
         {
-
         }
-        public Pharmacist(int id, string fullName, Hospital hospital) : base(id, fullName, hospital)
+        public Pharmacist(int id, string name, Hospital hospital) : base(id, name, hospital)
         {
         }
     }

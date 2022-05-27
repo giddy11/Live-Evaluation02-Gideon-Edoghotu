@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GroupSecondarySchoolModel",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OshbornCCSAevaluation", "..\..\source\OshbornCCSAevaluation\OshbornCCSAevaluation.csproj", "{418EA3C4-503B-4498-BE23-C623379547DC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewBankingSystem", "..\NewBankingSystem\NewBankingSystem\NewBankingSystem.csproj", "{21AD9A7D-2158-45CE-A177-BBE3CA32A9E7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{418EA3C4-503B-4498-BE23-C623379547DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{418EA3C4-503B-4498-BE23-C623379547DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{418EA3C4-503B-4498-BE23-C623379547DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21AD9A7D-2158-45CE-A177-BBE3CA32A9E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21AD9A7D-2158-45CE-A177-BBE3CA32A9E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21AD9A7D-2158-45CE-A177-BBE3CA32A9E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21AD9A7D-2158-45CE-A177-BBE3CA32A9E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -7,7 +7,7 @@ namespace Question1.Models
         public Accountant()
         {
         }
-        public Accountant(int id, string fullName, Hospital hospital) : base(id, fullName, hospital)
+        public Accountant(int id, string name, Hospital hospital) : base(id, name, hospital)
         {
         }
     }

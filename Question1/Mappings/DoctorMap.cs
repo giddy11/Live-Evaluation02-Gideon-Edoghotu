@@ -2,13 +2,11 @@
 
 namespace Question1.Mappings
 {
-    public class DoctorMap : HospitalWorkersMap<Doctor>
+    public class DoctorMap : EntityBaseMap<Doctor>
     {
-        //public DoctorMap()
-        //{
-        //    //Id(x => x.Id);
-        //    //Map(x => x.FullName);
-        //    //References(x => x.Hospital);
-        //}
+        public DoctorMap()
+        {
+            References(x => x.Hospital);
+        }
     }
 }

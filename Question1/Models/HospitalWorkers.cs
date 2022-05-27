@@ -1,23 +1,22 @@
 ﻿
 
+using Question1.Repos.EntityBase;
+
 namespace Question1.Models
 {
-    public class HospitalWorkers
+    public class HospitalWorkers : EntityBase
     {
         public HospitalWorkers()
         {
         }
 
-        public HospitalWorkers(int id, string fullName, Hospital hospital)
+        public HospitalWorkers(int id, string name, Hospital hospital)
         {
-            Id = id;
-            FullName = fullName;
+            ID = id;
+            Name = name;
             Hospital = hospital;
         }
 
-
-        public virtual int Id { get; set; }
-        public virtual string FullName { get; set; }
         public virtual Hospital Hospital { get; set; }
     }
 }

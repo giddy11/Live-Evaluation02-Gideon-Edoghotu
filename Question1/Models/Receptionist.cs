@@ -7,7 +7,7 @@ namespace Question1.Models
         public Receptionist()
         {
         }
-        public Receptionist(int id, string fullName, Hospital hospital) : base(id, fullName, hospital)
+        public Receptionist(int id, string name, Hospital hospital) : base(id, name, hospital)
         {
         }
     }
