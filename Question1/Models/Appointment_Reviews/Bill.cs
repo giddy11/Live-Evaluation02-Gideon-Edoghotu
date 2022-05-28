@@ -24,9 +24,6 @@ namespace Question1.Models.Appointment_Reviews
         {
             return TotalBills; 
         }
-
-
-
         
 
         public virtual int Id { get; set; }

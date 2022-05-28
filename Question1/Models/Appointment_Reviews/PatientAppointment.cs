@@ -1,14 +1,12 @@
 ﻿
 
 using Question1.Models.Products;
+using Question1.Repos.DBManager;
 
 namespace Question1.Models.Appointment_Reviews
 {
     public class PatientAppointment
-    {
-        //Receptionist receptionist = new Receptionist();
-        //PatientAppointment appointment = new PatientAppointment();
-        
+    {   
         public PatientAppointment()
         {
         }
@@ -21,24 +19,28 @@ namespace Question1.Models.Appointment_Reviews
             Hospital = hospital;
         }
 
-        //public virtual void BookAppointment(Patient patient)
-        //{
-        //    if (receptionist.CheckIfRegistered(patient) is true)
-        //    {
-        //        BookSchedule(new DateTime(5), Doctor, Hospital); 
-        //    }
-        //}
+        public virtual void BookAppointment(Patient patient)
+        {
+            Receptionist receptionist = new Receptionist();
+            if (receptionist.CheckIfRegistered(patient) is true)
+            {
+                BookSchedule(new DateTime(5), Doctor, Hospital);
+            }
+        }
 
-        //public virtual void BookSchedule(DateTime time, Doctor doctor, Hospital hospital)
-        //{
-        //    appointment.BookSchedule(time, doctor, hospital);
-        //}
+        public virtual void BookSchedule(DateTime time, Doctor doctor, Hospital hospital)
+        {
+            PatientAppointment appointment = new PatientAppointment();
 
-        //public virtual void AdministerDrugs(string nameofdrug)
-        //{
-        //    Prescription.Add(nameofdrug);
-        //}
-        
+            appointment.BookSchedule(time, doctor, hospital);
+            DataBaseManager<PatientAppointment>.AddItem(appointment);
+        }
+
+        public virtual void AdministerDrugs(string nameofdrug)
+        {
+            Prescription.Add(nameofdrug);
+        }
+
 
 
 
