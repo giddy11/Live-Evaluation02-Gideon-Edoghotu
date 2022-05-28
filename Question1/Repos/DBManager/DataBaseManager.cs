@@ -37,7 +37,7 @@ namespace Question1.Repos.DBManager
                 using (var session = FluentNHibernateHelper.OpenSession())
                 {
                     using var transaction = session.BeginTransaction();
-                    session.Save(item);
+                    session.Delete(item);
                     transaction.Commit();
                 }
             }
@@ -51,7 +51,7 @@ namespace Question1.Repos.DBManager
             }
         }
 
-        public static T ReadItem(T item)
+        public static T ReadItemById(int item)
         {
             try
             {

@@ -1,4 +1,5 @@
-﻿using Question1.Repos.EntityBase;
+﻿using Question1.Repos.DBManager;
+using Question1.Repos.EntityBase;
 
 
 namespace Question1.Models.Products
@@ -13,7 +14,10 @@ namespace Question1.Models.Products
             ID = id;
             Name = name;
             Price = price;
+            var phar = new List<Pharmacist>();
         }
+
+        
 
         public virtual void DrugPurchased(Patient patient)
         {
